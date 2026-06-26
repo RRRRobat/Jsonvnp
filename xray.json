@@ -1,0 +1,237 @@
+{
+  "dns": {
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ],
+    "queryStrategy": "UseIPv4"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      },
+      "tag": "socks"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "5.188.114.73",
+            "port": 18442,
+            "users": [
+              {
+                "id": "1e682dbc-d2de-40c1-8004-681c92789c71",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "smartcaptcha.yandexcloud.net",
+          "fingerprint": "chrome",
+          "publicKey": "olUTV28dWkomVkfH50avy8iELvc2gohx2fJF6bokqGI",
+          "shortId": "",
+          "spiderX": ""
+        },
+        "grpcSettings": {
+          "serviceName": "ns",
+          "multiMode": false
+        }
+      },
+      "tag": "proxy #2"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "5.188.114.73",
+            "port": 443,
+            "users": [
+              {
+                "id": "1e682dbc-d2de-40c1-8004-681c92789c71",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "id.pervye.ru",
+          "fingerprint": "chrome",
+          "publicKey": "_QNDgsnfJt9qUimf4fJFmtpDGgLCbx2oV02WLfTojj4",
+          "shortId": "",
+          "spiderX": ""
+        },
+        "grpcSettings": {
+          "serviceName": "ns",
+          "multiMode": false
+        }
+      },
+      "tag": "proxy #3"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "5.188.114.73",
+            "port": 18443,
+            "users": [
+              {
+                "id": "1e682dbc-d2de-40c1-8004-681c92789c71",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "id.pervye.ru",
+          "fingerprint": "chrome",
+          "publicKey": "olUTV28dWkomVkfH50avy8iELvc2gohx2fJF6bokqGI",
+          "shortId": "",
+          "spiderX": ""
+        },
+        "grpcSettings": {
+          "serviceName": "ns",
+          "multiMode": false
+        }
+      },
+      "tag": "proxy #4"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "5.188.114.73",
+            "port": 443,
+            "users": [
+              {
+                "id": "1e682dbc-d2de-40c1-8004-681c92789c71",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "id.pervye.ru",
+          "fingerprint": "chrome",
+          "publicKey": "_QNDgsnfJt9qUimf4fJFmtpDGgLCbx2oV02WLfTojj4",
+          "shortId": "",
+          "spiderX": ""
+        },
+        "grpcSettings": {
+          "serviceName": "ns",
+          "multiMode": false
+        }
+      },
+      "tag": "proxy #5"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "5.188.114.73",
+            "port": 18443,
+            "users": [
+              {
+                "id": "1e682dbc-d2de-40c1-8004-681c92789c71",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "id.pervye.ru",
+          "fingerprint": "chrome",
+          "publicKey": "olUTV28dWkomVkfH50avy8iELvc2gohx2fJF6bokqGI",
+          "shortId": "",
+          "spiderX": ""
+        },
+        "grpcSettings": {
+          "serviceName": "ns",
+          "multiMode": false
+        }
+      },
+      "tag": "proxy-2"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "socks"
+        ],
+        "port": "0-65535",
+        "balancerTag": "balancer"
+      }
+    ],
+    "balancers": [
+      {
+        "tag": "balancer",
+        "selector": [
+          "proxy #2",
+          "proxy #3",
+          "proxy #4",
+          "proxy #5",
+          "proxy-2"
+        ]
+      }
+    ]
+  },
+  "remarks": "proxy"
+}
