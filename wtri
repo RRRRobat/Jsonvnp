@@ -9,7 +9,8 @@
 
 -----------------
 
-wg://109.204.35.225:443?private_key=oAvt1OgmdqeqUENmFHCh8Puk+CLF6ey2Wt+OAbEIh0E%3D&local_address=10.2.0.2/32-2a07:b944::2:2/128&enable_amnezia=true&jc=22&jmin=77&jmax=137&h1=1&h2=2&h3=3&h4=4&i1=%3Cb%200xc70000000101eb00004055988000e4d3995e7951b41d23dbb150e211e82942d2acbfc4b0596a070887a0e75c6e9e125b838da7e42a511b381741c47bb784a497a0a47327046ce4e2007d611c6c119779f0f2e340d5d6c4525a87754d7c997c09%3E&public_key=lv6NDUdU2Fs5UxdccPw/LhE/5vZhpwXUc/CTLR7SEy0%3D&persistent_keepalive_interval=25#%F0%9F%87%A8%F0%9F%87%A6%20CA%2036%20(Amnesia)
+wg://109.204.35.225:443?private_key=oAvt1OgmdqeqUENmFHCh8Puk+CLF6ey2Wt+OAbEIh0E%3D&local_address=10.2.0.2/32-2a07:b944::2:2/128&enable_amnezia=true&jc=22&jmin=77&jmax=137&h1=1&h2=2&h3=3&h4=4&i1=%3Cb%200xc70000000101eb00004055988000e4d3995e7951b41d23dbb150e211e82942d2acbfc4b0596a070887a0e75c6e9e125b838da7e42a511b381741c47bb784a497a0a47327046ce4e2007d611c6c119779f0f2e340d5d6c4525a87754d7c997c09%3E&public_key=lv6NDUdU2Fs5UxdccPw/LhE/5vZhpwXUc/CTLR7SEy0%3D&persistent_keepalive_interval=25#%F0%9F%87%A8%F0%9F%87%A6%20CA%2036%20(AWG%202.0)
+wg://185.107.57.6:443?private_key=oAvt1OgmdqeqUENmFHCh8Puk+CLF6ey2Wt+OAbEIh0E%3D&local_address=10.2.0.2/32-2a07:b944::2:2/128&enable_amnezia=true&jc=87&jmin=25&jmax=35&h1=1&h2=2&h3=3&h4=4&i1=%3Cb%200xcd00000001019500004050389e9d50b54adf3d7b201298e06ddc84decc476cbaae7f5caa99df689a3d8bc8cdf4f1d328ca82147d4afbcd607f76c4ec72dcfa3831afb10b2469557a604f9bfc70d78c149fc6fbc2217d7b1ff6166e%3E&content_padding_addition=42-90&rekey_after_time=64-148&rekey_timeout=6-13&reject_after_time=67-147&keepalive_timeout=10-23&max_handshake_attempts=16-34&random_trailers=true&disable_cookies=true&public_key=r3s/7PwXSBh0lmwbNB2ukDfGelfPJmEeYfnmEcL4Ozk%3D&persistent_keepalive_interval=25#%F0%9F%87%B3%F0%9F%87%B1%20NL%20161%20(AWG%203.1)
 
 ------------------
 
