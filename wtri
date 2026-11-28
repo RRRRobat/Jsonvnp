@@ -3,6 +3,7 @@
 #profile-web-page-url: https://t.me/rrrrobat
 #support-url: https://t.me/rrrrobat
 #profile-update-interval: 1
+#sort-order: ping
 #subscription-userinfo: upload=0; download=0; total=0; expire=0
 #profile-locked: true
 #profile-type: encrypted
